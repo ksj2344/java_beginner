@@ -30,6 +30,9 @@ public class PrintFormat {
         System.out.printf("won:%12d원\n", won);
         System.out.printf("won:%-12d원\n", won);
 
+        String result=String.format("%d",won);  // result 변수자리에 포메팅 함수로 값 지정. 위에서 사용한 포매팅 함수는 똑같이 사용할 수 있음.
+        System.out.println("result:"+result);
 
+        //원칙상으로는 비용문제로 서버(백엔드)보단 클라이언트(프론트)의 리소스를 사용하는게 맞음. 간혹 인력 불균형으로 인해 서버쪽에서 일을 하기도 함.
     }
 }
