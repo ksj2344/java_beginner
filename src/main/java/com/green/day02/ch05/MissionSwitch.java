@@ -29,7 +29,7 @@ public class MissionSwitch {
                 System.out.println("평균입니다.");
             }
         }
-        //switch무느오 했을 때
+        //switch문으로 했을 때
         switch (gender){
             case "F":
                 if(height > 159){System.out.println("당신은 평균보다 큽니다.");
