@@ -1,6 +1,6 @@
 package com.green.day03.ch05;
 
-public class MissionContinueBreakFirst {
+public class MissionContinueBreakTry1 {
     public static void main(String[] args) {
         /*
             자연수 1부터 시작해서 모든 홀수를 더해 나간다.

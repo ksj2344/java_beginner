@@ -1,6 +1,6 @@
 package com.green.day03.ch05;
 
-public class MissionContinueBreakSecond {
+public class MissionContinueBreakTry2 {
     public static void main(String[] args) {
         /*
             자연수 1부터 시작해서 모든 홀수를 더해 나간다.
@@ -15,7 +15,7 @@ public class MissionContinueBreakSecond {
         int sum = 0;
         int i = 1;
 
-        for (i=0;true;i++){
+        for (i=0;true;i++){   //if break문을 없애고 true 대신 sum<1000으로 바꿀 수 있다.
             i++;     //i++가 아래로 가면 i를 1로 시작해야함. 또한 후에 출력된 i값이 원래 나와야 할 수 보다 1 많다.
             if((i%2)==0){
                 i++;
