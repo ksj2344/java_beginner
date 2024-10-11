@@ -19,7 +19,7 @@ public class MissionIf3 {
         } else {
             System.out.printf("%d는(은) 홀수입니다.", input);
         }
-        //위와 같은 역할
+        //위와 같은 역할을 하는 삼항 연산자.
         System.out.printf("%d는(은) %c수입니다.\n", input, (input % 2 == 0 ? '짝':'홀'));
 
         char result=(input % 2==0? '짝':'홀');
