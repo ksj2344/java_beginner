@@ -9,7 +9,7 @@ public class LabeledBreakPoint {
             for(int z=1; z<10; z++){
                 if((i*z)==72){
                     System.out.printf("%d x %d=%d\n", i, z,(i*z));
-                    break outer;
+                    break outer;     //물론 continue로도 사용 가능하다.
                 }
             }
         }   //이 for문을 벗어나면 다음에 다른 for문을 다시 Label 해도 그것과는 다른 코드의 Label이다.
