@@ -32,7 +32,7 @@ public class PrimitiveVsReferenceTest {
     m-nb를 통해 객체의 num값을 변경을 했다면 main-nb를 통해 접근했을 때 변경된 값을 얻게 된다.
      */
     public static void changeNum(NumberBox nb) {
-        //nb=new NumberBox();   //m-nb에 새로운 주소값을 저장하므로 main-nb와의 값이 달라짐 //즉 main-nb.num에 영향을 줄 수 없게됨.
+        nb=new NumberBox();   //m-nb에 새로운 주소값을 저장하므로 main-nb와의 값이 달라짐 //즉 main-nb.num에 영향을 줄 수 없게됨.
         nb.num = 100;
     }
 
