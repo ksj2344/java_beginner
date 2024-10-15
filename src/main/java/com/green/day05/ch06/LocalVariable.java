@@ -2,6 +2,7 @@ package com.green.day05.ch06;
 
 //지역변수
 public class LocalVariable {
+    static int aaa=11; //전역변수
 
     /*
         scope(스코프): 변수가 살아있는 범위=변수의 접근 가능 영역=변수가 소멸되지 않고 존재할 수 있는 영역

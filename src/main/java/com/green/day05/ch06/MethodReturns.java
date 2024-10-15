@@ -2,8 +2,7 @@ package com.green.day05.ch06;
 
 public class MethodReturns {
     public static void main(String[] args) {
-        int result;
-        result=adder(4,5);
+        int result=adder(4,5);
 
         System.out.printf("%d+%d=%d\n",4,5,result);
         System.out.printf("%.1fx%.1f=%.2f\n",3.5,3.5,square(3.5));  //3.5는 뒤에 뭔가 안 적는 이상(3.5f) double타입이다.

@@ -2,7 +2,7 @@ package com.green.day05.ch07;
 
 public class BankAccountPoTest {
     public static void main(String[] args) {
-        System.out.println("balance: "+BankAccountPO.balance);  //다른 클래스에 있으므로 클래스 명을 붙여야함
+        System.out.println("balance: "+BankAccountPO.balance);  //balance가 다른 클래스에 있으므로 클래스 명을 붙여야함
 
         int deposit=BankAccountPO.deposit(4000);//아래에 있는 코드랑 결국 같은 소리임
         deposit=BankAccountPO.deposit(4000);//부를때마다 값을 집어넣는다.
