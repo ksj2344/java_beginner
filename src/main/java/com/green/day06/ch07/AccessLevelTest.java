@@ -12,6 +12,8 @@ public class AccessLevelTest {
         String str = "문자열을 지정하는 class";
 
 //        Circle2 c=new Circle2();
+        //public을 붙이지 않은 class라 가져올 수 없다.
+        //public을 붙이는 조건: 파일명과 class명이 같음
 
         // ch09 AccessLevelModifiers 내용입니다.
     }

@@ -17,7 +17,7 @@ public class InforHideCircle {
     }
 }
 
-class Circle2 { //같은 패키지 안에 같은 이름의 clss생성불가
+class Circle2 { //같은 패키지 안에 같은 이름의 class생성불가
     private double radius=0; //Circle class를 벗어나면 radius에 접근 할 수 있는 방법은 없다.
     final double PI = 3.14; //얘는 Private 안붙어서 접근 가능하다.
 
