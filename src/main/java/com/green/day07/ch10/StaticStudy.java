@@ -22,8 +22,8 @@ public class StaticStudy {
         snb2.n1=15;
         snb2.n2=30;
 
-        snb1.sum();
-        snb2.sum();
+        snb1.sum(); //45
+        snb2.sum(); //45
         /*
         객체마다 멤버필드의 공간이 각각 생기길 원하면 non-static(인스턴스 멤버필드)로 해야한다.
         (각 객체마다 다른 값을 저장 가능하게 하고 싶다면)

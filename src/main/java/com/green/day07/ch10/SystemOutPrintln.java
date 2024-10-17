@@ -1,14 +1,14 @@
 package com.green.day07.ch10;
 
 import java.io.PrintStream;
-
+//Printstream은 대강 통신창이라고 보면됨
 public class SystemOutPrintln {
     public static void main(String[] args) {
         System.out.println();
 
         PrintStream out = System.out;     //System에 있는 out(주소값)을 PrintStream out에 복사한다.
         out.println();  //PrintStream out은 System.out과 같으니 System.out.println()으로 적을 수 있다.
-        //System: 클래스
+        //System: 클래스명
         //out: static 상수 멤버필드, 객체화된 PrintStream의 주소값이 저장이 된다.
         //println(): 메소드
         // PrintStream이라는 class를 기반으로 한 필드의 주소값이 System이라는 class안에 있는 참조변수 out에 저장되어 있고,

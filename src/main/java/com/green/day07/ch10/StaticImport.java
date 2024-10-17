@@ -1,6 +1,9 @@
 package com.green.day07.ch10;
+//static import 설명
+
 import static java.lang.Math.*;  //*은 all의 의미로 쓴다.
 //Math 클래스 아래의 static 멤버필드, 멤버메소드를 전부 import 한다는 의미.
+//TDD하게되면 사용한다.
 public class StaticImport {
     public static void main(String[] args) {
         /* 원래는 이렇게 작성을 해야하지만

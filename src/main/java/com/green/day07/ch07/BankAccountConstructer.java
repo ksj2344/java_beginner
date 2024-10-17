@@ -5,6 +5,10 @@ class BankAccount2 {  //day06패키지에 같은 class명이 있지만 다른 �
     private String ssNumber; //주민번호
     private int balance; //잔액
 
+    //private 멤버필드 값 변환 하는 두가지 방법   1. setter   2.생성자 활용
+    //※생성자는 있는데 setter 메소드가 없다면? 상수처럼 쓰겠다는 뜻이다.=값을 변경하지 않고 쓰겠다는 뜻이다.
+    // 이것을 이뮤터블immutable object라고 한다. 변환 가능 객체는 뮤터블mutable object라고 함.
+
     /*
         생성자와 메소드는 한 종류
         정의했을 때, 메소드와 다른점은 2가지가 있다.
@@ -63,6 +67,5 @@ public class BankAccountConstructer {
         BankAccount2 ba2 = new BankAccount2("111-222","990909-1778888",10000);
         ba2.checkMyBalance();
 
-        //※생성자는 있는데 setter 메소드가 없다면? 상수처럼 쓰겠다는 뜻이다.=값을 변경하지 않고 쓰겠다는 뜻이다.
     }
 }

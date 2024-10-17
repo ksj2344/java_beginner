@@ -9,7 +9,7 @@ public class Car {
 //        color="white";
 //        gearType="auto";
 //        door=4;            //이거랑 아래가 같은 소리임
-        this("white","auto",4);
+        this("white","auto",4);  //하드코딩(값이 지정된채로 객체생성) 되었다. 기본생성자로 객체 생성시 항상 같은 값이다.
         //생성자에서도 매소드나 생성자를 호출 가능하다. this를 통해 아래에 있는 생성자를 호출하여 default값을 지정해 주었다.
 
         /*
