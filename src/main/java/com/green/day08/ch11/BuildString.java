@@ -7,10 +7,19 @@ public class BuildString {
     public static void main(String[] args) {
         //문자열 "123"이 저장된 인스턴스 생성
         StringBuilder sb = new StringBuilder("123");
-        sb.append(45678);
+        //BuildString: 문자열 수정시 String을 쓰면 메모리 소모가 강함. 메모리 절약을 위해 쓰는 것.
+        //요즘은 자동으로 StringBuilder 변환이 가능하다곤 하나 반복문에선 적용안되므로 그냥 이렇게 해주는게 좋다.
+
+        /* StringBuilder와 StringBuffer 차이
+        StringBuilder는 스레드 안전(thread-safe)을 보장하지 않지만, 더 빠릅니다.
+        반면, StringBuffer는 스레드 안전을 보장하지만 약간 더 느립니다.
+        단일 스레드에서 작업할 때는 StringBuilder가 적합합니다. */
+
+        sb.append(45678); //덧붙이기
         System.out.println("sb: "+sb);
 
         sb.delete(0,2); //0이상 2미만의 인덱스 삭제
+        //파라미터가 start/end의 경우 인덱스 인덱스, start/length의 경우 인덱스, 길이
         System.out.println("sb: "+sb);
 
         //길이가 어떻게 되든 모든 문자열을 지우는 방법
@@ -45,6 +54,15 @@ public class BuildString {
             이때, reverse() 메서드가 새로운 객체를 생성하는 것이 아니라 현재 객체(sb) 자체를 수정하고 그 객체의 참조를 반환한다.
             replace()도 마찬가지.
             reverse()와 replace()가 모두 동일한 객체(sb)를 수정하고 그 객체를 반환하므로, sb2에는 여전히 sb와 동일한 객체가 할당된다.
+
+            아래는 다른 예시
          */
+        StringBuilder sb3 = new StringBuilder("123");
+        sb3.append("45678").delete(0,2).replace(0,3,"kk");
+        System.out.println("sb3: "+sb3);
+        //123
+        //12345678
+        //345678
+        //KK678
     }
 }

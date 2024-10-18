@@ -8,7 +8,7 @@ public class ArrayDeepCopy {
         for(int i=0;i<arr.length;i++){
             copyArr[i]=arr[i];
         }
-        // 이렇게 각 인덱스마다의 값이 같고 인덱스의 갯수가 같으면 Deepcopy라고 한다. 얘네는 '동등'하다.
+        // 이렇게 각 인덱스마다의 값이 같고 인덱스의 갯수가 같으면 Deepcopy라고 한다. 완전히 같은걸 새로 만드는 것. 얘네는 '동등'하다.
 
         System.out.println("arr==copyArr: "+(arr==copyArr));
         // 참조변수끼리의 ==은 동일성(같은 주소값)을 묻는 것이다.

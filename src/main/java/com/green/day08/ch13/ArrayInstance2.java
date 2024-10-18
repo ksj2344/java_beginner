@@ -4,6 +4,7 @@ public class ArrayInstance2 {
     public static void main(String[] args) {
         Box[] arr= new Box[5]; //클래스 타입의 배열을 정의할 수 있다.
         //이 배열에는 박스라는 객체의 주소값만 저장할 수 있다.
+        //객체 안에 객체 안에 객체 저장이 가능
         Box b1=new Box("안녕");
         System.out.println(b1);
         System.out.println(b1.toString());
