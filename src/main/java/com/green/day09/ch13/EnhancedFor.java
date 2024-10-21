@@ -3,6 +3,9 @@ package com.green.day09.ch13;
 public class EnhancedFor {
     //강화된 for문, 향상된 for문, foreach
     public static void main(String[] args) {
+
+        // =이나 return으로 전해줄 수 있는 데이터는 하나뿐이다. 그러나 객체화를 통해서 주소 정보를 주어 여러 정보를 줄 수 있다.
+        // 아래도 배열의 주소 하나를 int[] arr에 복사해서 준 것.
         int[] arr={10, 22, 7, 4, 80};
 
         for(int i=0; i<arr.length; i++){

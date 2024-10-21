@@ -18,6 +18,7 @@ public class VariableArguments {
     }
 
     static void sumVar(int... values){   //int 타입 뿐만 아니라 다른 타입, 물론 레퍼런스 타입도 가능하다! //(타입... 파라미터) 같은식으로 씀
+        //int... values는 배열.
         int sum = 0;
         for(int i=0;i<values.length;i++){
             sum += values[i];
