@@ -3,8 +3,8 @@ package com.green.day10.ch13;
 public class TwoDimenArray {
     public static void main(String[] args) {
 
-        int[][] arr=new int[3][5];//2차원 , 배열 안에 배열
-        int[][] arr3= {  //arr과 같은 자리 갯수를 가짐. 3행 5열
+        int[][] arr=new int[3][5];//3행 5열 2차원 배열, 3개의 배열 안에 5개 배열 //방만 만들 때 이런식으로
+        int[][] arr3= {  //arr과 같은 자리 갯수를 가짐. 3행 5열 2차원 배열
                 {0,0,7,14,0},
                 {0,0,0,0,0},
                 {0,0,0,0,0}
@@ -14,9 +14,15 @@ public class TwoDimenArray {
          */
         System.out.println("arr.length="+arr.length);
         System.out.println("arr3.length="+arr3.length);
-        int[] tmp1=arr3[0];  //arr3의 0행(첫번째행)을 tmp1에 복사해서 넣겠다는 뜻.
-        System.out.println("tmp1: "+tmp1[2]); //arr3의 0행(첫번째행) 2번째 값 출력한다.
+
+        int[] tmp1=arr3[0];  //arr3의 0번(첫번째행)을 tmp1에 복사해서 넣겠다는 뜻.
+        System.out.println("tmp1: "+tmp1[2]); //arr3의 0번(첫번째행) 2번째 값 출력한다.
         System.out.println("arr3[0][2]: "+arr3[0][2]); //위랑 같은 소리임.
+        tmp1[2]=100; //arr3[0][2]와 tmp1[2]를 8에서 100으로 바꾼다.
+        System.out.println("---------2번째 값 변경-----------");
+        System.out.println("tmp1: "+tmp1[2]);
+        System.out.println("arr3[0][2]: "+arr3[0][2]);
+        System.out.println("----------------------");
 
         int n=1;
         for(int i=0;i<arr.length;i++){ //행 구조 반복문
@@ -28,7 +34,6 @@ public class TwoDimenArray {
             }
         }
 
-        System.out.println("----------------------");
         for(int i=0;i<arr.length;i++){
             for(int i2=0;i2<arr[0].length;i2++){
                 System.out.printf("%d\t",arr[i][i2]);
