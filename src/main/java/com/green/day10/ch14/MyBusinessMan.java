@@ -8,6 +8,7 @@ public class MyBusinessMan {
         man1.tellYourSelf();
         //BusinessMan의 class안에는 tellYourSelf() method가 없지만 사용할 수 있다.
         //Man으로 부터 상속을 받아서 사용할 수 있는 것이다!
+        System.out.println(man1.toString());
         //같은 사유로 Object 클래스로 부터 상속 받았기 때문에 toString메소드를 호출할 수 있다.
         System.out.println("----------");
         man1.jump();  //오버라이딩 한 메소드를 사용
@@ -37,7 +38,7 @@ class Man extends Object {
         this.name = name;
     }
 
-    public String getName() {
+    public String getName() { //마찬가지로 super(); 생략되어있음
         return name;
     }
     public void tellYourSelf(){
@@ -49,6 +50,7 @@ class Man extends Object {
 }
 
 
+//상속: 내 부모의 메소드와 필드를 그대로 물려받는것.
 class BusinessMan extends Man{  //extends 상속받고픈 클래스
     private String company;
     private String position;
