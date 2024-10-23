@@ -40,7 +40,8 @@ class Friend {
     protected String name;  //pakege벗어나고 상속관계 벗어나면 결국 private와 같음
     protected String phone;
 
-    Friend(String name,String phone){  //setter가 없으므로 기본생성자 실행시 null,null이 됨. 아예 기본생성자를 없애서 그럴 케이스를 막음.
+
+    Friend(String name, String phone){
         this.name = name;
         this.phone = phone;
     }
@@ -68,7 +69,7 @@ class UnivFriend2 extends Friend {
         return major;
     }
     @Override
-    public void showInfo(){  // Friend의 showInfo()를 오버라이딩.
+    public void showInfo() {
         super.showInfo();
         System.out.println("major: "+major);
     }
