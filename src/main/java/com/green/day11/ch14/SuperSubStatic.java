@@ -9,9 +9,8 @@ public class SuperSubStatic {
     }
 }
 
-class SuperCLS{
-    protected static int count;
-
+class SuperCLS{  //클래스명과 파일명이 같을 때만 public이 붙을 수 있어서 SuperCLS와 SubClS에는 붙일수 없다.
+    protected static int count; //protected: 같은 패키지에만 접근 가능 패키지가 다르더라도 상속관계면 접근가능하다. class앞에는 줄수 없음
     SuperCLS(){
         count++; //객체 생성마다 count가 오름
     }

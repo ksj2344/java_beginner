@@ -7,12 +7,15 @@ public class OverridingThString {
         CheeseCake jerry = new CheeseCake();
         System.out.println(jerry);
 
+        System.out.println(cake.equals(cake.toString()));
+        //위의 결과는 false. 왜? cake는 Cake타입의 주소값. cake.toString()은 String으로 리턴된 String 타입의 문자열
+
         Cake c2=jerry; //Cake타입에 CheeseCake 타입을 저장할 수 있다. //c2와 jerry는 같은 객체를 가리킨다.
         System.out.println(c2); //실행이 된다면 cheeesCake나 c2나 똑같다.
     }
 }
 
-class Cake extends Object {
+class Cake extends Object { //extends Object 생략가능
 @Override //오버라이딩 실수 방지용, 오버라이딩이 아닐 시 컴파일 에러
     public String toString(){
         return "My birthday cake";

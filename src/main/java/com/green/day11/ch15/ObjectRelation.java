@@ -18,6 +18,4 @@ public class ObjectRelation {
         is-A로 처리할지 has-A로 처리할 지는 실은 온전히 개발자에게 달려있다. 관리가 유리한 대로 하면된다.
         보통 말로 만들어을 때 어색하지 않은 문장이 관계를 설정하지만 100% 아니다.
      */
-    public static void main(String[] args) {
-    }
 }

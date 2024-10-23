@@ -4,7 +4,7 @@ public class SuperSubCon {
     public static void main(String[] args) {
         ClassC c=new ClassC();
         // super 생성자 호출은 자식 생성자 코드에서 최상위에 위치해야한다.
-        // 위와 같은 사유로 생성자 실행시 Class A, B, C 순으로 진행됨.
+        // 위와 같은 사유로 생성자 실행시 super();가 먼저 실행되므로 Class A, B, C 순으로 진행됨.
         // C에서 거슬러가서 B로 갔다가 거기서 또 거슬러오른 후 A의 내용이 끝나면  B로 내려오는식.
 
     }
