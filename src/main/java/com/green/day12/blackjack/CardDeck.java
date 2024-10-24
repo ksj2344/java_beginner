@@ -3,19 +3,19 @@ package com.green.day12.blackjack;
 public class CardDeck {
 
     //Card 객체 주소값 52개를 저장할 수 있어야함.
-    private final Card[] cards; //cards의 주소값만 상수로 지정. 각 방의 주소값은 변수로서 계속 기능한다.
+    private final Card[] deck; //deck의 주소값만 상수로 지정(이뮤터블). 각 방의 주소값은 변수로서 계속 기능한다.
     private final String[] patterns;
     private int selectedIdx=0; //외부에 줘야할 카드의 idx값
 
-    public CardDeck() { //생성자로 cards 배열의 length 지정
-        cards = new Card[52]; //52개의 Card 객체를 저장할 수 있는 배열이 있음
+    public CardDeck() { //생성자로 deck 배열의 length 지정
+        deck = new Card[52]; //52개의 Card 객체를 저장할 수 있는 배열을 만들어 배열의 주소를 넣어줌.
         patterns = new String[]{"Diamond", "Heart", "Clova", "Spade"};
-        int index = (cards.length/patterns.length);
-        int n=0;
+        int index = (deck.length/patterns.length);
+        int n=0; //지역변수는 default값이 없어서 0나 null이라도 줘야함.
         //enhanced for문은 각 방의 값을 item에 복사해서 쓰는 것이므로 값을 넣어줄 때는 사용할 수 없음.
-        for (String item:patterns) {  //그러나 여기서는 cards[n]에 patterns 배열의 값을 복사해서 넣어주는 것이기 때문에 상관없다.
+        for (String item:patterns) {  //그러나 여기서는 deck[n]에 patterns 배열의 값을 복사해서 넣어주는 것이기 때문에 상관없다.
             for (int j = 0; j <index; j++) {
-                cards[n] = new Card(item,getDenomination(j+1));  //item은 결국 pattern[i]
+                deck[n] = new Card(item,getDenomination(j+1));  //item은 결국 pattern[i]
                 n++;
             }
         }
@@ -26,11 +26,12 @@ public class CardDeck {
     private void shuffle() {
         //생성자를 호출할 때마다 섞이도록 해도 되지만.
         //cards가 전역변수라서 메소드로 만들어서 호출해도 된다.
-        for (int i = 0; i<cards.length; i++) {
-            int shuffle=(int)(Math.random()*cards.length);//0~51<인덱스값
-            Card shuffledCard = cards[i];
-            cards[i] = cards[shuffle];
-            cards[shuffle] = shuffledCard;
+        for (int i = 0; i< deck.length; i++) {
+            int shuffle=(int)(Math.random()* deck.length);//0~51<인덱스값
+            // Math.random과 .random 차이. 전자는 static메소드, 후자는 객체화해야하고 기능이 더 많음.
+            Card shuffledCard = deck[i];
+            deck[i] = deck[shuffle];
+            deck[shuffle] = shuffledCard;
         }
     }
     public String getDenomination(int n) {
@@ -56,7 +57,7 @@ public class CardDeck {
     }
 
     public void checkCard(){
-        for (Card item : cards) {
+        for (Card item : deck) {
             System.out.println(item);
             // 여기서 item을 pattern(denomination)으로 출력하려면 Card 클래스에서 toString을 오버라이드 해야함
             // 왜? item에서 출력하는 것은 CardDeck의 객체가 아니라 Card의 객체들이기 때문에.
@@ -71,13 +72,13 @@ public class CardDeck {
        2. 몇번째 카드까지 배부했는지 전역변수(여기서는 selectedIdx)로 기억하고 주는 방식
      */
     public Card draw(){
-        if(selectedIdx>=cards.length){
+        if(selectedIdx>= deck.length){
             System.out.println("No more cards");
             return null;
         }
 
-        Card card=cards[selectedIdx];
-        cards[selectedIdx]=null;
+        Card card= deck[selectedIdx];
+        deck[selectedIdx]=null;
         selectedIdx++;
         return card;
     }
