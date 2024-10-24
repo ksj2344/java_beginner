@@ -86,13 +86,12 @@ public class MyArrayList {
         if(arr.length<=0){
             return 0;
         }
-        int num=arr[arr.length-1];
-        int index=arr.length-1;
-        int[] temp = new int[index];
-        for(int i =0; i<index; i++){
+        int[] temp = new int[arr.length-1]; //기존보다 한칸작은 배열 만들기
+        int num=arr[arr.length-1];  //원본배열의 마지막 값을 num에 넣기, index는 0부터 세니까 -1
+        for(int i =0; i<temp.length; i++){
             temp[i] = arr[i];
         }
-        arr=temp;
+        arr=temp;  //한칸 작은 배열 주소값을 전역변수 arr에 복사
         return num;
     }
 
