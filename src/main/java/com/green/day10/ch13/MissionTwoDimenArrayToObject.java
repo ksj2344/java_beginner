@@ -1,5 +1,7 @@
 package com.green.day10.ch13;
 
+import com.green.personal.Hypen;
+
 public class MissionTwoDimenArrayToObject {
     //객체지향적으로 해결해보자!
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class MissionTwoDimenArrayToObject {
         //그러나 굳이 이렇게 하지 않는다!
         System.out.println("영수의 합계: "+arr[0].getAllScore());
         //이렇게 한다.
-        System.out.println("-----------");
+        Hypen.line();
 
         printStudentsInfo(arr);
         printTotalKorScores(arr); // 국어-합계점수?, 평균점수-?

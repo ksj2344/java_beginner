@@ -1,4 +1,7 @@
 package com.green.day11.ch16;
+
+import com.green.personal.Hypen;
+
 //다형성(polymorphism)
 public class PolyStudy {
     /*
@@ -19,7 +22,7 @@ public class PolyStudy {
         Cat cat=new Cat();
         cat.roar();
 
-        System.out.println("-------------------");
+        Hypen.line();
         //1번검증
         Animal ani1=new Cat();
         Animal ani2=new Dog();
@@ -51,15 +54,15 @@ public class PolyStudy {
         bulldog4.jump(); //ani3의 주소값을 명시적 형변환 후 Bulldog에 있는 메소드 실행
         ((Bulldog)ani3).jump(); //명시적 형변환과 호출을 같이 해도 됨! 다만 괄호에는 넣어줘야한다. 안넣을시 ani3.jump()를 Bulldog을 형변환 하게됨.
 
-        System.out.println("-------------------");
+        Hypen.line();
 
         ani3.roar();
         bulldog4.roar();
         //결국 위의 두개는 똑같다. 같은 주소값이기 때문이다.  //타입에 따라 주소값이 달라지지 않는다.
-        System.out.println("-------------------");
+        Hypen.line();
 
 
-        //instanceof()   형변환이 가능하다면 ture, 아니면 false를 출력 하는 메소드
+        //instanceof   형변환이 가능하다면 ture, 아니면 false를 출력 하는 연산자
         //왼쪽항이 객체주소값 오른쪽 항이 타입(Class)
         // 가능: 타입이 동일한 객체이거나 자식 객체
         // 불가능: 가능의 반대

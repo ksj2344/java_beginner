@@ -9,7 +9,7 @@ public class BankAccountTest {
         //레퍼런스 타입은 객체의 주소값을 가진다. 기본타입은 day01.ch02.StudyDataType참조
         //ba는 BankAccount의 객체 주소값만 담을 수 있는 참조변수이다.
 
-        //BankAccount ba2=new Strint("안녕"); //따라서 ba2는 String주소를 담을 수 없다.
+        //BankAccount ba2=new String("안녕"); //따라서 ba2는 String주소를 담을 수 없다.
 
         ba.deposit(1000);
         ba.checkMyBalance();

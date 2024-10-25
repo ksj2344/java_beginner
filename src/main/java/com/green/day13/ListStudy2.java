@@ -5,10 +5,12 @@ import java.util.List;
 
 public class ListStudy2 {
     public static void main(String[] args) {
-        // Generic 제네릭
+        // Generic 제네릭  List<E> 으로 쓸 수 있다. 타입은 <E>만 있는게 아니니 따로 공부하기
         // 제네릭을 사용하면 실행 될 때 타입이 결정된다.
         // 제네릭이 사용된 클래스에 타입을 결정하지 않으면(<>안에 아무것도 안적으면) 타입은 Object가 된다.
         // 어지간하면 제네릭해서 사용한다.
+
+
         // 아래 3가지는 결국 같은 소리이다. 맘에 드는 것을 사용
         List<Integer> list=new ArrayList<Integer>();
         List<Integer> list2=new ArrayList<>();

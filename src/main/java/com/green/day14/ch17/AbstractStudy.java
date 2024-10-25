@@ -50,10 +50,10 @@ class AbstractStudyTest{
         //AbstractStudy study = new AbstractStudy();
         //추상 클래스는! 객체화가 불가능하다!
         AbstractStudy study =  new ImplementsStudy();
-        //ImplementsStudy는 객체화가 가능하다!
+        //ImplementsStudy, 즉 추상클래스의 임플리먼트 단계 class는 객체화가 가능하다!
         study.sum();
         //AbstractStudy는 sum메소드를 알고있다! 고로 ImplementsStudy에 있는 sum();호출한다!
-        //가장 가까이 있는 것 부터 호출하므로 ImplementsStudy의 sum();을 호출한다. ImplementsStudy객체기 때문
+        //가장 가까이 있는 것 부터 호출하므로 ImplementsStudy의 sum();을 호출한다. ImplementsStudy의 객체이기 때문.
 
     }
 }

@@ -1,7 +1,5 @@
 package com.green.day14.ch17;
 
-import com.green.personal.Hypen;
-import com.sun.tools.jconsole.JConsoleContext;
 
 public class MakerInterface {
     public static void main(String[] args) {
@@ -34,7 +32,7 @@ interface Printable2 {
 interface Upper{}
 interface Lower{}
 
-class Report0 extends Object implements Printable2, Upper { //implement하는 동시에 상속받기도 가능하다.
+class Report0 extends Object implements Printable2, Upper { //implement하는 동시에 상속받기도 가능하다.  //상속은 한가지씩만.
     private String contents;
     Report0(String contents) {
         this.contents = contents;

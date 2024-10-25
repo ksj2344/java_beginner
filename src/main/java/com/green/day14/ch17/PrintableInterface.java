@@ -12,10 +12,10 @@ package com.green.day14.ch17;
 
 public class PrintableInterface {
     public static void main(String[] args) {
-        // Printable pi = new Printable(); //Printable은 객체화 안됨. 얘도 추상클래스
-        Printable p2=new PrintableImpl(); //Printable 임플리먼트(구현) 객체화!
+        // Printable pi = new Printable(); //Printable은 객체화 안됨. interface인 얘도 추상클래스
+        Printable p2=new PrintableImpl(); //Printable의 변수에 Printable 임플리먼트(구현) 객체화 가능! //부모타입이기 때문에.
         p2.print("dddd");
-        System.out.println(p2.NUM);
+        System.out.println(p2.NUM);  //
         System.out.println(Printable.NUM); //static은 이렇게 쓰는게 맞음.
     }
 }
@@ -25,7 +25,7 @@ public class PrintableInterface {
 //interface를 만들 때 생략하면 무조건 들어가는 키워드가 있다.
 interface Printable {
     int NUM=0;
-    void print(String doc);  //추상 메소드만 담을 수 있다.
+    void print(String doc);  //추상 메소드만 담을 수 있다.   //여기서 String doc은 파라미터부분
 }
 /*
 interface Printable {
