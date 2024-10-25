@@ -31,8 +31,10 @@ public class PolyStudy {
         //2번검증
         // Bulldog dog2=new Dog(); //불가 -컴파일 에러
 
-        // Bulldog bulldog2=(Bulldog)dog1; //Dog 타입의 변수 명시적 형변환(안됨) -런타입에러
-             // ani2에는 Dog타입이 저장되어있다. 자식타입인 Bulldog에 부모객체인 Dog를 주소값을 저장하려 하여 에러발생.
+        // BullDog bullDog2 = (BullDog)ani2;
+        // ani2에는 Dog객체 주소값이 저장되어 있음.
+        // 자식타입인 BullDog에 부모객체인 Dog객체 주소값을 담으려고 하니
+        // 런타임 에러 발생
         Bulldog bulldog3=(Bulldog)dog1;  //dog1에는 Bulldog타입의 객체 주소값이 저장되어있었기 때문에 명시적 형변환에 문제가 없다.
         /*
             불독은 jump메소드를 알고 있는데 Dog는 jump메소드를 가지고 있지 않아 호출이 된다면(만약) 에러가 터진다.
@@ -40,7 +42,6 @@ public class PolyStudy {
             자식은 메소드가 부모보다 더 늘어날 수 있지만 줄어들 수는 없기 때문에.
             강제로 저장하려 하면 런타임 에러가 발생한다.
          */
-
 
         //3번 검증
         //ani3.jump();  //ani3에는 Bulldog 객체 주소값이 저장되어있으나,

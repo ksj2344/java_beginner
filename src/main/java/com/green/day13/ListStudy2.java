@@ -15,6 +15,7 @@ public class ListStudy2 {
         List<Integer> list3=new ArrayList(); //생략이 가능하다.
 
         //Integer : int를 객체화 하여 쓸 수 있는 wrapper class. 이것을 쓰는 이유: List<> 안에 primative 타입이 들어갈 수 없기 때문이다.
+        // ArrayList 클래스에서 <> 안의 내용이 E로 메소드가 만들어져있고 이게 E의 타입으로 객체를 만든 효과가 나고있다.
 
         // list는 정수만 들어갈 수 있는 list이다. list.add("")할 수 없다.
         list.add(10);
@@ -37,7 +38,7 @@ public class ListStudy2 {
 
 
         //당연하지만 indexOf 쓸 수 있다.
-        list.add(0, 30);
+        list.add(0, 30); //인덱스를 지정해서 값넣는거
         System.out.println(list);
         System.out.println("list.lastIndexOf(30) : " + list.lastIndexOf(30));
         System.out.println("list.indexOf(30) : " + list.indexOf(30));
