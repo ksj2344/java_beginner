@@ -1,43 +1,60 @@
 package com.green.personal;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class CallRandom {
-    private static final int studentlan=20;
-    private static int[] students;
-    private static LocalDate lastCalledDate;
+    final static int studenlan=20; //전체 학생 정원 수 지정
+    private static final int[] students=new int[studenlan]; //배열 주소값 상수화
+    private static int num; //몇번 호출하였는가를 저장할 변수
+    private static LocalDate lastResetDate=LocalDate.now(); //마지막 초기화 날짜
+
     public static void main(String[] args) {
-        lastCalledDate = LocalDate.now();
-        students= new int [studentlan];
-        Arrays.fill(students, -1);
-        callStudent();
-
-    }
-    public static void callStudent() {
-        LocalDate today = LocalDate.now(); //오늘 날짜와 마지막 호출 날짜를 비교
-        if(!today.equals(lastCalledDate)) {
-            students = new int [studentlan]; //날짜가 바뀌었다면 배열 초기화
-            Arrays.fill(students, -1);
-            lastCalledDate = today; //오늘 날짜로 업데이트
+        Scanner scan=new Scanner(System.in);
+        System.out.println("학생번호를 확인하려면 Enter을 누르세요. 종료(q)");
+        while (true) { //누를때마다 반복
+            String input=scan.nextLine();
+            if (input.equals("q")) {
+                System.out.println("프로그램 종료.");
+                break;
+            }
+            callRandom();
         }
-        Random random = new Random();
-        int n=0;
+        scan.close();
+        System.out.println(Arrays.toString(students)); //호출된 학생 배열 확인
+    }
 
-        while(n<studentlan) {
-            int randomStudent = random.nextInt(studentlan)+1;
-            boolean alreadyCalled = false;
-            for(int item:students) {
-                if(item==randomStudent) {
-                    alreadyCalled = true;
+    static void resetStudents() {
+        Arrays.fill(students, 0); //배열을 0으로 초기화
+        num=0; //호출횟수 초기화
+        lastResetDate=LocalDate.now();
+        System.out.println("학생배열 초기화");
+    }
+
+
+    static void callRandom() {
+        if(!LocalDate.now().equals(lastResetDate)) {
+            resetStudents(); //날짜가 바뀌면 배열 초기화
+        }
+        if (num >= studenlan) { //num수가 학생수를 넘긴 예외처리
+            System.out.println("모든 학생이 호출되었습니다.");
+            return;
+        }
+        int random;
+        boolean unique;
+        do {
+            random = (int) (Math.random() * studenlan) + 1;
+            unique = true;
+            for (int i = 0; i < num; i++) { //꼭 다 돌필요 없이 추가된 곳까지 돌도록 수정
+                if (students[i] == random) {
+                    unique = false;  //중복발견
                     break;
                 }
-            }//중복이 아니면 출력하고 배열에 추가
-            if(!alreadyCalled) {
-                System.out.println(randomStudent);
-                students[n++] = randomStudent;
             }
-        }
+        }while (!unique) ; //중복이 없을 때까지 반복
+        students[num++] = random;
+        System.out.println("호출된 학생 번호: " + random);
+
     }
 }
