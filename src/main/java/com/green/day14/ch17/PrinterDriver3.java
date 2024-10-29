@@ -16,7 +16,8 @@ public class PrinterDriver3 {
 //★☆ class가 class를 상속받을 때는 extends
 //★☆ class가 interface를 상속받을 때는 implements
 //★☆ interface가 interface를 상속받을 때는 extends
-//★☆ interface는 class를 상속 받을 수 없다. 당연하지만 implements도 안됨.
+
+//★☆ interface는 class(Object포함)를 상속 받을 수 없다. 당연하지만 implements도 안됨.
 interface ColorPrintable extends Printable {  //인터페이스 Printable을 상속한 인터페이스 ColorPrintable
     void printCMYK(String doc);
     //인터페이스는 추상메소드만 가질 수 있다.

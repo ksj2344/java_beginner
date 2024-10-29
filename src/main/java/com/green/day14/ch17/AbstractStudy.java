@@ -15,14 +15,13 @@ public abstract class AbstractStudy {
     추상 메소드 구현하는것을 : implements, 구현한다. 라고 한다. (구현부를 만드는 행위)
      */
 
+    //추상클래스나 인터페이스는 규격 구상할 때 사용한다. 표준을 만들어놓고 그에 맞춰서 제작하도록
+    // mmorpg로 따지자면 마법사, 몽크, 기사, 힐러 있다면 그 객체들의 표준이 되는 '캐릭터'라는 추상클래스가 있다.
+
     //추상 메소드 정의
     //선언부만 있고 구현부가 없는 메소드를 추상 메소드라고 한다.
     //그리고 abstract를 붙여야한다.
     public abstract void sum();
-
-
-    //추상클래스나 인터페이스는 규격 구상할 때 사용한다. 표준을 만들어놓고 그에 맞춰서 제작하도록
-    // mmorpg로 따지자면 마법사, 몽크, 기사, 힐러 있다면 그 객체들의 표준이 되는 '캐릭터'라는 추상클래스가 있다.
 
     //추상 클래스는 클래스적인 특징과 인터페이스적 특징도 가진다.
     //그래서 추상클래스도 구현부가 있는 메소드를 만들 수는 있다.
@@ -32,7 +31,11 @@ public abstract class AbstractStudy {
 
 }
 
-class ImplementsStudy extends AbstractStudy {
+abstract class ImplementsStudy2 extends AbstractStudy {
+ //추상클래스를 상속받은 클랙스도 추상 클래스가 될 수 잇음.
+}
+
+class ImplementsStudy extends AbstractStudy {   //클래스 제작시 오류발생 원인 2가지: 생성자 or 임플리먼트
     //implements 단계
     //반드시 부모의 추상메소드를 구현해야한다.
     @Override //<-이때는 에노테이션 굳이 적어줄 필요 없긴함. 어차피 오버라이드 안할시 오류나기때문.
@@ -41,14 +44,11 @@ class ImplementsStudy extends AbstractStudy {
     }
 }
 
-abstract class ImplementsStudy2 extends AbstractStudy {
- //추상클래스를 상속받은 클랙스도 추상 클래스가 될 수 잇음.
-}
-
 class AbstractStudyTest{
     public static void main(String[] args) {
         //AbstractStudy study = new AbstractStudy();
         //추상 클래스는! 객체화가 불가능하다!
+
         AbstractStudy study =  new ImplementsStudy();
         //ImplementsStudy, 즉 추상클래스의 임플리먼트 단계 class는 객체화가 가능하다!
         study.sum();

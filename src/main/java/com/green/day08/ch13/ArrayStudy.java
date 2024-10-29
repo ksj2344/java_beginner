@@ -60,5 +60,8 @@ public class ArrayStudy {
 
         배열과 반복문(for)의 궁합이 좋다. 대부분 함께 쓰인다.
      */
-
+    public static void main(String[] args) {
+        int[] arr=new int[10];
+        System.out.println(arr[0]);
+    }
 }
