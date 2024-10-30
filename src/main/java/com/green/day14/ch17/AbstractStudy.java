@@ -1,6 +1,4 @@
 package com.green.day14.ch17;
-
-public abstract class AbstractStudy {
     /*
     p.380 추상클래스
     class 키워드 앞에 abstract 키워드를 붙이면 추상 클래스가 된다.
@@ -18,6 +16,7 @@ public abstract class AbstractStudy {
     //추상클래스나 인터페이스는 규격 구상할 때 사용한다. 표준을 만들어놓고 그에 맞춰서 제작하도록
     // mmorpg로 따지자면 마법사, 몽크, 기사, 힐러 있다면 그 객체들의 표준이 되는 '캐릭터'라는 추상클래스가 있다.
 
+public abstract class AbstractStudy {
     //추상 메소드 정의
     //선언부만 있고 구현부가 없는 메소드를 추상 메소드라고 한다.
     //그리고 abstract를 붙여야한다.

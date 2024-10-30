@@ -19,7 +19,7 @@ public class ExceptionStudy2 {
         System.out.println("r: "+r);
     }
     public static int div(int n1, int n2) throws Exception{  //throws 예외 //해당 예외 발생시 던지겠다.
-        //throws Exception 나는 메소드를 호출한 부분으로 던지고 넘어가겠다.
+        //throws Exception=나는 메소드를 호출한 부분으로 던지고 넘어가겠다.
         return n1/n2;
     }
 }

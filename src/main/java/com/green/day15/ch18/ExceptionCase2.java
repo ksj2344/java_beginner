@@ -22,6 +22,7 @@ public class ExceptionCase2 {
         }
         //catch() 메소드, ArithmeticException 에러에 관련한 객체(클래스), e 객체주소
         //catch문에서 또 에러가 발생할 수 있으므로 catch문 안에 catch문을 넣을 수 있다. 그러나 안하도록 하는게 좋음.
-        Hypen.end();
+
+        Hypen.end(); //try-catch가 없다면 실행되지 않았을 부분.
     }
 }

@@ -63,7 +63,9 @@ class FinallyCase3 {
             return;
         } catch(IOException e) {
             e.printStackTrace();
-        }finally {  //(실행보장)예외가 발생해도 안해도 무조건 실행되는 부분. 무조건! 실행중 위에서 return 키워드를 만나도 무조건 실행된다.
+        }finally {  //(실행보장)예외가 발생해도 안해도 무조건 실행되는 부분.
+            // 무조건! 실행 중 위에서 return 키워드를 만나도 무조건 실행된다.
+            // 그래서 반납 혹은 종료 처리에 사용된다. 여기서는 writer.close()
             System.out.println("실행되는지 확인");
             try {
                 if(writer !=null) {

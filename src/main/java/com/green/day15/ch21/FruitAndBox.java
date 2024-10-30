@@ -6,7 +6,8 @@ public class FruitAndBox {
         AppleBox chugdo = new AppleBox(new Apple());  //AppleBox안에 Apple 객체만 들어가면 되니까 굳이 Apple ap 변수는 필요없음.
         OrangeBox delmont = new OrangeBox(new Orange());
 
-        //현재 상황으로는 박스 하나당 하나의 사과와 오렌지만이 들어갈 수 있다. 사과 하나가 더 있으면 박스를 새로 만들어야한다.
+        //현재 상황으로는 한 사과박스 하나당 하나의 사과와 한 오렌지박스 하나당 하나의오렌지만이 들어갈 수 있다.
+        // 사과나 오렌지가 하나가 더 있으면 박스를 새로 만들어야한다.
     }
 }
 
