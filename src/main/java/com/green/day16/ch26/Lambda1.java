@@ -20,7 +20,7 @@ public class Lambda1 {
     }
 }
 
-@FunctionalInterface
+@FunctionalInterface  //추상메소드 하나만 가지게 하는 에노테이션  //람다식을 사용하려고 사용
 interface printableVer2{
     void print(String str);
 }
