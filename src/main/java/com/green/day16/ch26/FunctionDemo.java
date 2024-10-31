@@ -8,7 +8,7 @@ public class FunctionDemo {
 
         //배열 안에서 가장 큰 숫자 리턴
         //제너럴 방식은 <파라미터,리턴타입>
-        Function<Integer[], Integer> fn = integers -> {
+        Function<Integer[], Integer> fn = integers -> { //메소드가 하나라 중괄호 생략은 못해도 람다식 쓸 수는 있음.
                 int mVal=integers[0];
                 for(int item:integers){
                     mVal=mVal<item? item:mVal;  //삼항식 이용하기.
