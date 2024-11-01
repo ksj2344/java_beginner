@@ -12,7 +12,7 @@ public class PrinterDriver2 {
         Hypen.line();
         prn2.print(myDoc);
 
-        //Prn204=(Prn204Drv)prn2;  //캐스팅에러. 형제관계라 형변환 불가
+        //Prn204=(Prn204Drv)prn2;  //캐스팅에러. 각자 다르게 구현한 것이라 형변환 불가
 
     }
 }

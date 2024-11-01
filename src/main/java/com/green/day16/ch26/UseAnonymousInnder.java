@@ -8,7 +8,7 @@ import com.green.personal.Hypen;
 public class UseAnonymousInnder {
     public static void main(String[] args) {
         //익명클래스
-        Printable pr=new Printable() {  //인터페이스가 객체화가 된게 아니라 임플리먼트 class가 이름없이 생략된것임. 구현부터 객체화까지 바로 실행.
+        Printable pr = new Printable() {  //인터페이스가 객체화가 된게 아니라 임플리먼트 class가 이름없이 생략된것임. 구현부터 객체화까지 바로 실행.
             @Override
             public void print() {
                 System.out.println("익명클래스 print");
@@ -25,7 +25,7 @@ public class UseAnonymousInnder {
         };
         p2.print();
 
-        Printable p3= ()-> System.out.println("람다 print2");   //구현부가 한줄이면 이렇게 줄일수도 있음.
+        Printable p3 = () -> System.out.println("람다 print2");   //구현부가 한줄이면 이렇게 줄일수도 있음.
         p3.print();
 
 
@@ -48,9 +48,8 @@ public class UseAnonymousInnder {
 }
 
 
-
 @FunctionalInterface //람다식을 쓰고싶을때, 추상 메소드가 둘이면 불가하므로 추상메소드를 하나만 갖도록하는 어노테이션이다.
-interface Printable{
+interface Printable {
     void print();
     //인터페이스는 객체화 불가능. 왜? 추상메소드(구현부 없음)만을 가지기 때문임
 }
