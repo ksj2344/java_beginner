@@ -4,6 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+// insert delete update select의 반환타입과 파라미터 타입을 알아 둘 것.
+
 //Data Access Object (DB 작업하는 객체)
 public class BoardDao {
     // insert, update, delete >> 리턴값은 영향받은 행 값
