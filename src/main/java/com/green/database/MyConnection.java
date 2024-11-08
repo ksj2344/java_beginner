@@ -15,13 +15,3 @@ public class MyConnection {
         return conn;
     }
 }
-
-class MyconnectionTest {
-    public static void main(String[] args) {
-        try {
-            Connection conn =MyConnection.getConn();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-}

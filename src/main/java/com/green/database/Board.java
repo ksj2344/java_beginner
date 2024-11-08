@@ -57,4 +57,10 @@ public class Board {
     public void setBoardId(int boardId) {
         this.boardId = boardId;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d, %s, %s, %s, %s, %s"
+                , boardId, title, contents, writer, createdAt, updatedAt);
+    }
 }
